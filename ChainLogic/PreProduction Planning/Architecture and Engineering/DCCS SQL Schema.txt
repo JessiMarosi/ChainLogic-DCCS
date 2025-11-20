@@ -1,0 +1,94 @@
+-- 1. Roles Table
+CREATE TABLE Roles (
+    role_id SERIAL PRIMARY KEY,
+    role_name VARCHAR(50) NOT NULL UNIQUE,
+    description TEXT
+);
+
+-- 2. Users Table
+CREATE TABLE Users (
+    user_id SERIAL PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    role_id INT NOT NULL REFERENCES Roles(role_id),
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    last_login TIMESTAMP
+);
+
+-- 3. Locations Table
+CREATE TABLE Locations (
+    location_id SERIAL PRIMARY KEY,
+    location_name VARCHAR(100) NOT NULL,
+    description TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 4. Cases Table
+CREATE TABLE Cases (
+    case_id SERIAL PRIMARY KEY,
+    case_number VARCHAR(50) NOT NULL UNIQUE,
+    case_name VARCHAR(100),
+    description TEXT,
+    created_by INT REFERENCES Users(user_id),
+    date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 5. Evidence Table
+CREATE TABLE Evidence (
+    evidence_id SERIAL PRIMARY KEY,
+    evidence_code VARCHAR(50) NOT NULL UNIQUE,
+    case_id INT REFERENCES Cases(case_id),
+    description TEXT,
+    category VARCHAR(50),
+    location_id INT REFERENCES Locations(location_id),
+    date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    added_by INT REFERENCES Users(user_id),
+    status VARCHAR(50) DEFAULT 'In Storage'
+);
+
+-- 6. Evidence_Photos Table
+CREATE TABLE Evidence_Photos (
+    photo_id SERIAL PRIMARY KEY,
+    evidence_id INT NOT NULL REFERENCES Evidence(evidence_id),
+    file_path VARCHAR(255) NOT NULL,
+    file_type VARCHAR(20),
+    uploaded_by INT REFERENCES Users(user_id),
+    date_uploaded TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 7. Signatures Table
+CREATE TABLE Signatures (
+    signature_id SERIAL PRIMARY KEY,
+    user_id INT NOT NULL REFERENCES Users(user_id),
+    signature_data TEXT NOT NULL, -- could store Base64 or file path
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    transfer_id INT REFERENCES Custody_Transfers(transfer_id)
+);
+
+-- 8. Custody_Transfers Table
+CREATE TABLE Custody_Transfers (
+    transfer_id SERIAL PRIMARY KEY,
+    evidence_id INT NOT NULL REFERENCES Evidence(evidence_id),
+    from_user_id INT REFERENCES Users(user_id),
+    to_user_id INT REFERENCES Users(user_id),
+    from_location_id INT REFERENCES Locations(location_id),
+    to_location_id INT REFERENCES Locations(location_id),
+    reason TEXT NOT NULL,
+    transfer_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    released_signature_id INT REFERENCES Signatures(signature_id),
+    received_signature_id INT REFERENCES Signatures(signature_id)
+);
+
+-- 9. Audit_Log Table
+CREATE TABLE Audit_Log (
+    audit_id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES Users(user_id),
+    action_type VARCHAR(50) NOT NULL,
+    evidence_id INT REFERENCES Evidence(evidence_id),
+    case_id INT REFERENCES Cases(case_id),
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    details TEXT
+);
