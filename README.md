@@ -1,69 +1,66 @@
-# ChainLogic-DCCS
+# ChainLogic-DCCS  
+**Jurisdiction-Aware • NIST 800-53 Aligned • Forensic-Grade Digital Chain of Custody**
 
-**Jurisdiction-aware | NIST 800-53-aligned | Forensic-grade documentation**
+ChainLogic™ is a proprietary Digital Chain-of-Custody System (DCCS) purpose-built for secure, compliant, and fully traceable evidence lifecycle management in high-stakes digital environments. This repository contains the reference architecture, compliance artifacts, and supporting documentation required by federal contractors, law enforcement agencies, legal counsel, and cybersecurity teams.
 
-ChainLogic™ is a proprietary Digital Chain-of-Custody System (DCCS) engineered for **secure, compliant, and traceable evidence handling** across digital environments. This repository provides the foundational architecture and documentation for ChainLogic-DCCS, designed to meet the rigorous standards of **federal contractors, legal teams, and cybersecurity professionals**.
-
-> ⚠️ **Notice**  
-> This repository is under active development. Certain documentation and structural elements are placeholders pending full implementation and legal review. Finalized content will reflect complete compliance and operational readiness.
-
----
-
-## 🔐 Purpose
-
-ChainLogic-DCCS establishes a defensible, scalable framework for digital evidence management that:
-- Aligns with **NIST 800-53 controls** and jurisdictional requirements  
-- Preserves **forensic integrity** across distributed systems  
-- Enables **audit-ready documentation** and chain-of-custody verification  
+> **Notice**  
+> This repository is under active development. Certain components and documentation remain placeholders pending final legal review, red-team validation, and formal compliance certification.
 
 ---
 
-## 📂 Repository Structure
+## Purpose & Core Capabilities
 
-# ChainLogic-DCCS Directory Structure
+ChainLogic-DCCS delivers a defensible and scalable framework that:
 
-ChainLogic-DCCS/
---ChainLogic/ # Core custody logic, jurisdictional routing, compliance enforcement
-- Configs/ # Role-based access configs, retention schedules, API integration settings
-- Diagrams/ # Architecture diagrams, custody flowcharts, jurisdictional override visuals
-- Docs/ # SOPs, CJIS/HIPAA alignment guides, audit-grade documentation
-- Evidence/ # Sample payloads, hash logs, forensic validation artifacts
-- Images/ # Visual assets for dashboards and documentation
-- Pages/ # Civic dashboard mockups and public-facing HTML artifacts
-- Scripts/ # Python/shell scripts for custody automation and audit trail generation
-- .gitignore # Excludes sensitive and platform-specific clutter
-- LICENSE # MIT license for public use and adaptation
-└── README.md # Project overview, usage instructions, recruiter-facing notes
+- Automatically enforces jurisdictional routing and compliance rules  
+- Guarantees forensic integrity from ingestion through disposition  
+- Produces immutable, audit-ready chain-of-custody records  
+- Aligns with NIST 800-53, CJIS, HIPAA, FedRAMP, and state-specific evidence statutes  
 
 ---
 
-## 📘 Contents
+## Repository Structure
+---
 
-- **`ChainLogic/`** — Core custody logic, jurisdictional routing, and compliance modules  
-- **`Configs/`** — Access control and retention policy configurations  
-- **`Docs/`** — Alignment guides and audit-ready documentation  
-- **`Evidence/`** — Validation artifacts and forensic payloads  
-- **`Scripts/`** — Automation and audit trail generation utilities  
+## Directory Details
+
+| Directory     | Purpose                                                                                   |
+|---------------|-------------------------------------------------------------------------------------------|
+| `ChainLogic/` | Core business logic, rule engine, and compliance enforcement modules                      |
+| `Configs/`    | YAML/JSON configuration for roles, retention policies, and external system integrations   |
+| `Diagrams/`   | High-resolution architecture, data-flow, and jurisdictional decision diagrams           |
+| `Docs/`       | Standard Operating Procedures, compliance mapping, and audit-ready templates             |
+| `Evidence/`   | Example evidence packages with full cryptographic provenance and validation reports      |
+| `Images/`     | Logos, icons, screenshots, and illustrative graphics                                      |
+| `Pages/`      | Public-facing civic portal mockups (HTML/CSS/JS)                                          |
+| `Scripts/`    | Python & shell automation for evidence processing, hashing, and audit trail generation   |
 
 ---
 
-## 🛠️ Usage
+## Usage & Intended Audience
 
-This repository is intended for **demonstration, legal review, and stakeholder alignment**.  
-All code and documentation are authored by **Jessi Marosi, Founder & CEO of Bytelock™**, and protected under applicable copyright and trademark laws.
+This repository serves as:
+- A technical demonstration for prospective partners and clients  
+- Reference material for legal and compliance reviews  
+- A foundation for internal development and red-team validation  
 
----
-
-## ⚖️ Legal Notice
-
-ChainLogic™ and Bytelock™ are proprietary innovations.  
-Unauthorized use, reproduction, or distribution is prohibited.  
-All documentation and code © 2025 Jessi Marosi. All rights reserved.
+All code and documentation © 2025 Jessi Marosi.  
+Authored by **Jessi Marosi** — Founder & CEO, Bytelock™
 
 ---
 
-## 🧭 Versioning
+## Legal & Licensing
 
-- **`main` branch** reflects the latest stable documentation  
-- **Commits** are timestamped for traceability and legal review  
-- **No public releases or tags** until compliance and stakeholder sign-off  
+- **ChainLogic™** and **Bytelock™** are trademarks of Bytelock, Inc.  
+- The reference implementation in this repository is released under the MIT License for evaluation and adaptation.  
+- Commercial use, redistribution, or deployment of the ChainLogic™ brand and proprietary components requires explicit licensing.
+
+---
+
+## Versioning & Release Policy
+
+- `main` branch contains the latest stable documentation and reference code  
+- All commits are cryptographically signed and timestamped for legal traceability  
+- No public releases or version tags will be created until full compliance sign-off is obtained  
+
+---
