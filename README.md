@@ -20,17 +20,19 @@ ChainLogic-DCCS establishes a defensible, scalable framework for digital evidenc
 
 ## 📂 Repository Structure
 
-ChainLogic-DCCS/ 
-├── ChainLogic/ # Core custody logic, jurisdictional routing, compliance enforcement 
-├── Configs/ # Role-based access configs, retention schedules, API integration settings 
-├── Diagrams/ # Architecture diagrams, custody flowcharts, jurisdictional override visuals 
-├── Docs/ # SOPs, CJIS/HIPAA alignment guides, audit-grade documentation 
-├── Evidence/ # Sample payloads, hash logs, forensic validation artifacts 
-├── Images/ # Visual assets for dashboards and documentation 
-├── Pages/ # Civic dashboard mockups and public-facing HTML artifacts 
-├── Scripts/ # Python/shell scripts for custody automation and audit trail generation 
-├── .gitignore # Excludes sensitive and platform-specific clutter 
-├── LICENSE # MIT license for public use and adaptation 
+# ChainLogic-DCCS Directory Structure
+
+ChainLogic-DCCS/
+├── ChainLogic/ # Core custody logic, jurisdictional routing, compliance enforcement
+├── Configs/ # Role-based access configs, retention schedules, API integration settings
+├── Diagrams/ # Architecture diagrams, custody flowcharts, jurisdictional override visuals
+├── Docs/ # SOPs, CJIS/HIPAA alignment guides, audit-grade documentation
+├── Evidence/ # Sample payloads, hash logs, forensic validation artifacts
+├── Images/ # Visual assets for dashboards and documentation
+├── Pages/ # Civic dashboard mockups and public-facing HTML artifacts
+├── Scripts/ # Python/shell scripts for custody automation and audit trail generation
+├── .gitignore # Excludes sensitive and platform-specific clutter
+├── LICENSE # MIT license for public use and adaptation
 └── README.md # Project overview, usage instructions, recruiter-facing notes
 
 ---
