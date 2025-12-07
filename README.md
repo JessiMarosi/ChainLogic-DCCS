@@ -7,12 +7,35 @@ ChainLogic™ is a proprietary Digital Chain-of-Custody System (DCCS) engineered
 > ⚠️ **Important Notice**  
 > This repository is actively under construction. Some documentation and structural elements are placeholders pending full implementation and legal review. Finalized content will reflect full compliance and operational readiness.
 
+# ChainLogic-DCCS
+
+**Jurisdiction-aware | NIST 800-53-aligned | Forensic-grade documentation**
+
+ChainLogic™ is a proprietary Digital Chain-of-Custody System (DCCS) engineered for secure, compliant, and traceable evidence handling across digital environments. This repository contains the foundational architecture and documentation for ChainLogic-DCCS, designed to meet the rigorous standards of federal contractors, legal teams, and cybersecurity professionals.
+
+---
+
 ## 🔐 Purpose
 
 To establish a defensible, scalable framework for digital evidence storage that:
 - Aligns with NIST 800-53 controls and jurisdictional requirements
 - Preserves forensic integrity across distributed systems
 - Enables audit-ready documentation and chain-of-custody verification
+
+---
+
+## 📁 Repository Structure
+
+```plaintext
+ChainLogic-DCCS/
+├── Docs/                  # Architecture, compliance notes, chain-of-custody reports
+├── Configs/               # DCCS configuration files, jurisdiction routing logic
+├── Scripts/               # Automation scripts for deployment and compliance enforcement
+├── Evidence/              # Audit reports, logs, reproducibility artifacts
+├── Images/                # Diagrams and visual assets
+├── Diagrams/              # Workflow and architecture diagrams
+├── Pages/                 # Public-facing demo or documentation pages
+└── README.md              # This file
 
 ## 📁 Contents
 
