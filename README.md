@@ -26,16 +26,19 @@ To establish a defensible, scalable framework for digital evidence storage that:
 
 ## 📁 Repository Structure
 
-```plaintext
 ChainLogic-DCCS/
-├── Docs/                  # Architecture, compliance notes, chain-of-custody reports
-├── Configs/               # DCCS configuration files, jurisdiction routing logic
-├── Scripts/               # Automation scripts for deployment and compliance enforcement
-├── Evidence/              # Audit reports, logs, reproducibility artifacts
-├── Images/                # Diagrams and visual assets
-├── Diagrams/              # Workflow and architecture diagrams
-├── Pages/                 # Public-facing demo or documentation pages
-└── README.md              # This file
+├── ChainLogic/         # Core custody logic, jurisdictional routing, and compliance enforcement modules
+├── Configs/            # Role-based access configs, retention schedules, and API integration settings
+├── Diagrams/           # Architecture diagrams, custody flowcharts, and jurisdictional override visuals
+├── Docs/               # SOPs, CJIS/HIPAA alignment guides, and audit-grade documentation
+├── Evidence/           # Sample payloads, hash logs, and forensic validation artifacts
+├── Images/             # Visual assets used in dashboards and documentation
+├── Pages/              # Civic dashboard mockups and public-facing HTML artifacts
+├── Scripts/            # Python and shell scripts for custody automation and audit trail generation
+├── .gitignore          # Excludes sensitive and platform-specific clutter
+├── LICENSE             # MIT license for public use and adaptation
+├── README.md           # Project overview, usage instructions, and recruiter-facing notes
+
 
 ## 📁 Contents
 
