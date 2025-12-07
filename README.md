@@ -23,7 +23,7 @@ ChainLogic-DCCS establishes a defensible, scalable framework for digital evidenc
 # ChainLogic-DCCS Directory Structure
 
 ChainLogic-DCCS/
-├── ChainLogic/ # Core custody logic, jurisdictional routing, compliance enforcement
+--ChainLogic/ # Core custody logic, jurisdictional routing, compliance enforcement
 - Configs/ # Role-based access configs, retention schedules, API integration settings
 - Diagrams/ # Architecture diagrams, custody flowcharts, jurisdictional override visuals
 - Docs/ # SOPs, CJIS/HIPAA alignment guides, audit-grade documentation
